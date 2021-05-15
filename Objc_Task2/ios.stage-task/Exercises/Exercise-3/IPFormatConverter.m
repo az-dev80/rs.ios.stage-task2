@@ -18,15 +18,15 @@
         else if (numbersArray.count == 1){
             return [res stringByAppendingFormat:@"%d.0.0.0", [numbersArray[i] intValue]];
         }
-        else if (numbersArray.count == 2){
-            return [res stringByAppendingFormat:@"%d.0.0", [numbersArray[i] intValue]];
-        }
-        else if (numbersArray.count == 3){
-            return [res stringByAppendingFormat:@"%d.0", [numbersArray[i] intValue]];
-        }
-        else if (numbersArray.count > 3 && i <4){
+        else if (numbersArray.count > 1 && i <4){
             res = [res stringByAppendingFormat:@"%d.", [numbersArray[i] intValue]];
         }
+    }
+    if (numbersArray.count == 2){
+        return [res stringByAppendingFormat:@"%@0.0", res];
+    }
+    if (numbersArray.count == 3){
+        return [res stringByAppendingFormat:@"%@0", res];
     }
     NSString *string = [res substringToIndex:[res length] - 1];
     
