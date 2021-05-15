@@ -23,10 +23,10 @@
         }
     }
     if (numbersArray.count == 2){
-        return [res stringByAppendingFormat:@"%@0.0", res];
+        return [res stringByAppendingString:@"0.0"];
     }
     if (numbersArray.count == 3){
-        return [res stringByAppendingFormat:@"%@0", res];
+        return [res stringByAppendingString:@"0"];
     }
     NSString *string = [res substringToIndex:[res length] - 1];
     
